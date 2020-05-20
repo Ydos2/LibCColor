@@ -9,10 +9,6 @@
 
 void my_put_error(char *str)
 {
-    int i = 0;
-
-    while (str[i] != '\0') {
+    for (int i = 0; str[i] != '\0'; i++)
         write(2, &str[i], 1);
-        i++;
-    }
 }

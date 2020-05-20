@@ -7,6 +7,8 @@
 
 SRC	=	src/my_putcolor.c			\
 
+CFLAGS = -Iinclude/
+
 OBJ	=	$(SRC:.c=.o)
 
 NAME	=	libcolor.a

@@ -38,6 +38,7 @@ SRC	=	src/my_atof.c						\
 		src/my_usage.c						\
 		src/my_xmalloc.c					\
 		src/my_xopen.c						\
+		src/my_putnbr_base.c				\
 
 OBJ	=	$(SRC:.c=.o)
 

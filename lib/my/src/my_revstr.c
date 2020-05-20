@@ -13,8 +13,7 @@ char *my_revstr(char *str)
 
     if (str == 0)
         return (0);
-    while (str[i] != '\0')
-        i++;
+    for (; str[i] != '\0'; i++);
     i--;
     for (int x = 0; x < i; x++, i--) {
         c = str[x];

@@ -15,7 +15,7 @@ float my_atof(char *str)
 
     while (str[idx] != 0 && str[idx] >= '0' && str[idx] <= '9')
         nb = nb * 10.0 + (str[idx++] - 48);
-    idx += 1;
+    idx++;
     if (str[idx] == '.') {
         while (str[idx] != 0) {
             nb = nb * 10.0 + (str[idx] - 48);

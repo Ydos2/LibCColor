@@ -5,13 +5,13 @@
 ** print the alphabet in ascending order
 */
 
-void my_putchar(char c);
+#include <unistd.h>
 
 int my_isneg(int n)
 {
     if (n < 0)
-        my_putchar('N');
+        write(1, "N", 1);
     else
-        my_putchar('P');
+        write(1, "P", 1);
     return (0);
 }

@@ -5,35 +5,29 @@
 ** print the alphabet in ascending order
 */
 
-void my_putchar(char c);
+#include <unistd.h>
 
-static void my_put_minint(void)
+static void my_putstr(char *str)
 {
-    my_putchar('-');
-    my_putchar('2');
-    my_putchar('1');
-    my_putchar('4');
-    my_putchar('7');
-    my_putchar('4');
-    my_putchar('8');
-    my_putchar('3');
-    my_putchar('6');
-    my_putchar('4');
-    my_putchar('8');
+    for (int i = 0; str[i] != '\0'; i++)
+        write(1, &str[i], 1);
 }
 
 int my_put_nbr(int nb)
 {
+    int rtn = 0;
+
     if (nb == -2147483648) {
-        my_put_minint();
+        my_putstr("-2147483648");
         return (0);
     }
     if (nb < 0) {
         nb *= -1;
-        my_putchar('-');
+        write(1, "-", 1);
     }
     if (nb >= 10)
         my_put_nbr(nb / 10);
-    my_putchar(nb % 10 + 48);
+    rtn = nb % 10 + 48;
+    write(1, &rtn, 1);
     return (0);
 }
