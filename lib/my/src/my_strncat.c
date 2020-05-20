@@ -11,23 +11,19 @@ static int get_dest_len(char *dest)
 
     if (dest == 0)
         return (0);
-    while (dest[i] != '\0')
-        i++;
+    for (; dest[i] != '\0'; i++);
     return (i);
 }
 
 char *my_strncat(char *dest, char const *src, int n)
 {
-    int i = 0;
     int dest_len = get_dest_len(dest);
 
     if (src == 0)
         return (dest);
     if (dest == 0)
         return (0);
-    while (src[i] != '\0' && i < n) {
+    for (int i = 0; src[i] != '\0' && i < n; i++)
         dest[dest_len + i] = src[i];
-        i++;
-    }
     return (dest);
 }

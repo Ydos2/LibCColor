@@ -48,7 +48,9 @@ NAME	=	libmy.a
 
 all:	$(NAME)
 
-$(NAME):	$(OBJ)
+$(NAME): build_lib
+
+build_lib: $(OBJ) ## Compile the libs
 	@echo -e "\033[1;93mCompiling lib....\033[0;39m"
 	@ar rc $(NAME) $(OBJ)
 	@echo -e "\033[1;32mLib successfully compiled !\033[0;39m"

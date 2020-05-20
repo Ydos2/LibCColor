@@ -5,10 +5,10 @@
 ** print the alphabet in ascending order
 */
 
-void my_put_error(char *str);
+#include <unistd.h>
 
 int my_usage(int a, int b)
 {
-    my_put_error("error: this operator is not supported");
+    write(2, "Error: this operator is not supported\n", 38);
     return (0);
 }
