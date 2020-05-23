@@ -48,8 +48,8 @@ jobs:
         run: mkdir build && cd build && cmake .. && cmake --build .
 
       - name: Build gcovr
-        working-directory: ${{ runner.temp }}/Criterion/build
-        run: pip install gcovr
+        working-directory: ${{ runner.temp }}
+        run: pip install git+https://github.com/gcovr/gcovr.git
 
       - name: Run tests
         env:
