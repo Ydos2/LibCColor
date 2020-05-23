@@ -1,2 +1,2 @@
 # LibCColor
-![Actions Status](https://github.com/actions/hello-world/workflows/.github/workflows/main.yml/badge.svg)
+[![Actions Status](https://github.com/Ydos2/LibCColor/blob/master/.github/workflows/main.yml/badge.svg)](https://github.com/Ydos2/LibCColor/actions)
