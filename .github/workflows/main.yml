@@ -46,8 +46,6 @@ jobs:
         if: steps.cache.outputs.cache-hit != 'true'
         working-directory: ${{ runner.temp }}/Criterion
         run: mkdir build && cd build && cmake .. && cmake --build .
-          sudo apt-get update
-          sudo apt-get install libghc-criterion-dev
 
       - name: Run tests
         env:
@@ -55,4 +53,4 @@ jobs:
           LD_LIBRARY_PATH: ${{ runner.temp }}/Criterion/build:${{ env.LD_LIBRARY_PATH }}
           LIBRARY_PATH: ${{ runner.temp }}/Criterion/build:${{ env.LIBRARY_PATH }}
           CPATH: ${{ runner.temp }}/Criterion/include:${{ env.CPATH }}
-        run: make tests_run ARGS="--verbose"
+        run: make tests_run
