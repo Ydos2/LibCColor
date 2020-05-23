@@ -46,7 +46,9 @@ jobs:
         if: steps.cache.outputs.cache-hit != 'true'
         working-directory: ${{ runner.temp }}/Criterion
         run: mkdir build && cd build && cmake .. && cmake --build .
-          pip install gcovr
+
+      - name: Build gcovr
+        run: pip install gcovr
 
       - name: Run tests
         env:
