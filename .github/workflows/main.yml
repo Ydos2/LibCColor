@@ -49,7 +49,7 @@ jobs:
 
       - name: Build gcovr
         working-directory: ${{ runner.temp }}
-        run: pip install git+https://github.com/gcovr/gcovr.git
+        run: sudo pip install gcovr
 
       - name: Run tests
         env:
@@ -57,4 +57,5 @@ jobs:
           LD_LIBRARY_PATH: ${{ runner.temp }}/Criterion/build:${{ env.LD_LIBRARY_PATH }}
           LIBRARY_PATH: ${{ runner.temp }}/Criterion/build:${{ env.LIBRARY_PATH }}
           CPATH: ${{ runner.temp }}/Criterion/include:${{ env.CPATH }}
-        run: make tests_run
+        run: sudo pip install gcovr
+          make tests_run
