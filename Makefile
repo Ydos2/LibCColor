@@ -63,7 +63,7 @@ valgrind:	fclean	all ## Launch valgrind
 	@valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes ./$(TARGET)
 
 tests_run: CFLAGS += --coverage ## Launch tests
-tests_run: fclean build_lib $(OBJ) $(OBJ_TESTS)
+tests_run: build_lib $(OBJ) $(OBJ_TESTS)
 	@printf "\e[1;32mFinished compiling sources\e[0m\n"
 	@$(CC) $(CFLAGS) $(OBJ) $(OBJ_TESTS) $(LIBS) -o $(TEST_TARGET) $(TEST_LFLAGS)
 	@printf "\e[1;3;5;32m▀▄▀▄▀▄ Tests the code ▄▀▄▀▄▀\e[0m\n"
