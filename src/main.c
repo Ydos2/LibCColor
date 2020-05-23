@@ -6,14 +6,16 @@
 */
 
 #include "color.h"
+#include "my_error.h"
+#include "my_maths.h"
 #include "my.h"
 
 int main(int ac, char **av)
 {
-    (void)ac;
     (void)av;
-    my_putcolor("#1", 1);
-    my_putstr("The lib is compile !\n");
-    color(-1);
+    if (ac > 1)
+        my_put_error("Its an error\n");
+    my_add(1, 1);
+    my_putstr_color("The lib is compile !\n", 1);
     return (0);
 }

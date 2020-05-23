@@ -41,13 +41,11 @@ void color(int i)
     write(1, "m", 1);
 }
 
-int my_putcolor(char *str, int i)
+int my_putcolor(int nbr_color)
 {
-    if (str[i] >= '0' && str[i] <= '7')
-        color(str[i] - 48);
-    else {
+    if (nbr_color >= 0 && nbr_color < 8)
+        color(nbr_color);
+    else
         color(-1);
-        i--;
-    }
-    return (i);
+    return (0);
 }

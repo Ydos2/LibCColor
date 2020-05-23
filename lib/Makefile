@@ -17,16 +17,24 @@ goodbye:
 	@echo -e "|___/ |___||___||___/|___/  |  |___$(NORMAL)"
 
 build: ## compile all lib
+	@echo -e "\033[1;93mCompiling lib....\033[0;39m"
 	@$(MAKE) -C my --silent
 	@$(MAKE) -C color --silent
+	@$(MAKE) -C my_error --silent
+	@$(MAKE) -C my_maths --silent
+	@echo -e "\033[1;32mLib successfully compiled !\033[0;39m"
 
 clean: ## clean all lib
 	@$(MAKE) clean -C my --silent
 	@$(MAKE) clean -C color --silent
+	@$(MAKE) clean -C my_error --silent
+	@$(MAKE) clean -C my_maths --silent
 
 fclean: clean goodbye ## delete the useless file and clean
 	@$(MAKE) fclean -C my --silent
 	@$(MAKE) fclean -C color --silent
+	@$(MAKE) fclean -C my_error --silent
+	@$(MAKE) fclean -C my_maths --silent
 
 re: fclean all ## Clean then compile
 

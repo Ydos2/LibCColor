@@ -6,14 +6,10 @@
 ##
 
 SRC	=	src/my_atof.c						\
-		src/my_compute_power_rec.c			\
-		src/my_compute_square_root.c		\
 		src/my_find_prime_sup.c				\
 		src/my_getnbr.c						\
 		src/my_is_prime.c					\
 		src/my_isneg.c						\
-		src/my_operator.c					\
-		src/my_put_error.c					\
 		src/my_put_nbr.c					\
 		src/my_putchar.c					\
 		src/my_putstr.c						\
@@ -36,9 +32,8 @@ SRC	=	src/my_atof.c						\
 		src/my_strupcase.c					\
 		src/my_swap.c						\
 		src/my_usage.c						\
-		src/my_xmalloc.c					\
-		src/my_xopen.c						\
 		src/my_putnbr_base.c				\
+		src/my_atoi.c						\
 
 OBJ	=	$(SRC:.c=.o)
 
@@ -51,9 +46,7 @@ all:	$(NAME)
 $(NAME): build_lib
 
 build_lib: $(OBJ) ## Compile the libs
-	@echo -e "\033[1;93mCompiling lib....\033[0;39m"
 	@ar rc $(NAME) $(OBJ)
-	@echo -e "\033[1;32mLib successfully compiled !\033[0;39m"
 
 clean:
 	@rm -f $(OBJ)
