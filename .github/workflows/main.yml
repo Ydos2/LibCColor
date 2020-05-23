@@ -48,6 +48,7 @@ jobs:
         run: mkdir build && cd build && cmake .. && cmake --build .
 
       - name: Build gcovr
+        working-directory: ${{ runner.temp }}
         run: pip install gcovr
 
       - name: Run tests
