@@ -5,7 +5,7 @@
 ## Makefile
 ##
 
-SHELL	=	bash
+SHELL	=	/bin/sh
 
 SRC		=	src/main.c			\
 
