@@ -34,6 +34,7 @@ SRC	=	src/my_atof.c						\
 		src/my_usage.c						\
 		src/my_putnbr_base.c				\
 		src/my_atoi.c						\
+		src/get_next_line.c					\
 
 OBJ	=	$(SRC:.c=.o)
 

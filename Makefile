@@ -15,7 +15,7 @@ NAME	=	a.out
 
 CFLAGS	=	-I./include -Wextra -W -Wall -pedantic -fdiagnostics-color
 
-LIBS	=	-L lib/my/ -lmy -L lib/color/ -lcolor -L lib/my_error/ -lerror -L lib/my_maths/ -lmaths
+LIBS	=	-L lib/my/ -lmy -L lib/color/ -lcolor -L lib/my_error/ -lerror -L lib/my_maths/ -lmaths -L lib/my_printf/ -lprintf
 
 TEST_TARGET	=	unit_tests
 

@@ -8,6 +8,12 @@
 #ifndef MY_H_
 #define MY_H_
 
+// my_printf.c
+void my_printf(char *str, ...);
+
+// get_next_line.c
+char *get_next_line(int fd);
+
 // my_atof.c
 float my_atof(char *str);
 

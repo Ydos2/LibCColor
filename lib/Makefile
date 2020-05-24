@@ -22,6 +22,7 @@ build: ## compile all lib
 	@$(MAKE) -C color --silent
 	@$(MAKE) -C my_error --silent
 	@$(MAKE) -C my_maths --silent
+	@$(MAKE) -C my_printf --silent
 	@echo -e "\033[1;32mLib successfully compiled !\033[0;39m"
 
 clean: ## clean all lib
@@ -29,12 +30,14 @@ clean: ## clean all lib
 	@$(MAKE) clean -C color --silent
 	@$(MAKE) clean -C my_error --silent
 	@$(MAKE) clean -C my_maths --silent
+	@$(MAKE) clean -C my_printf --silent
 
 fclean: clean goodbye ## delete the useless file and clean
 	@$(MAKE) fclean -C my --silent
 	@$(MAKE) fclean -C color --silent
 	@$(MAKE) fclean -C my_error --silent
 	@$(MAKE) fclean -C my_maths --silent
+	@$(MAKE) fclean -C my_printf --silent
 
 re: fclean all ## Clean then compile
 

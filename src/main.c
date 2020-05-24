@@ -17,5 +17,6 @@ int main(int ac, char **av)
         my_put_error("Its an error\n");
     my_add(1, 1);
     my_putstr_color("The lib is compile !\n", 1);
+    my_printf("Yes !\n");
     return (0);
 }
